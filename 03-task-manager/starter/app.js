@@ -6,7 +6,7 @@ const connectDB = require("./db/connect");
 require("dotenv").config();
 const notFound = require("./middleware/not-found");
 const errorHandler = require("./errors/custom-error");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // middleware
 app.use(express.static("./public"));
@@ -14,7 +14,7 @@ app.use(express.static("./public"));
 app.use(express.json());
 // app.use(notFound)
 // routes
-app.get("/hello", (req, res) => {
+app.get("/hello", (req, res) => { 
   res.send("Task Manager app");
 });
 
